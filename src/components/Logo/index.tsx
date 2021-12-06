@@ -1,99 +1,54 @@
 import { Box, Hidden, Tooltip } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
+import InnoWingIcon from '../../assets/InnoWing-Icon.jpg';
 
-const LogoWrapper = styled(Link)(
+const LogoWrapper = styled(Box)(
   ({ theme }) => `
         color: ${theme.palette.text.primary};
         padding: ${theme.spacing(0, 1, 0, 0)};
         display: flex;
+        align-items: center;
         text-decoration: none;
         font-weight: ${theme.typography.fontWeightBold};
 `
 );
 
-const LogoSignWrapper = styled(Box)(
+const LogoSignWrapper = styled(Link)(
   () => `
-        width: 52px;
-        height: 38px;
-        margin-top: 4px;
-        transform: scale(.8);
+        width: 42px;
+        transform: scale(.07);
 `
 );
 
-const LogoSign = styled(Box)(
+const LogoTextWrapper = styled(Link)(
   ({ theme }) => `
-        background: ${theme.general.reactFrameworkColor};
-        width: 18px;
-        height: 18px;
-        border-radius: ${theme.general.borderRadiusSm};
-        position: relative;
-        transform: rotate(45deg);
-        top: 3px;
-        left: 17px;
-
-        &:after, 
-        &:before {
-            content: "";
-            display: block;
-            width: 18px;
-            height: 18px;
-            position: absolute;
-            top: -1px;
-            right: -20px;
-            transform: rotate(0deg);
-            border-radius: ${theme.general.borderRadiusSm};
-        }
-
-        &:before {
-            background: ${theme.palette.primary.main};
-            right: auto;
-            left: 0;
-            top: 20px;
-        }
-
-        &:after {
-            background: ${theme.palette.secondary.main};
-        }
+        padding-left: ${theme.spacing(4)};
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
 `
 );
 
-const LogoSignInner = styled(Box)(
-  ({ theme }) => `
-        width: 16px;
-        height: 16px;
-        position: absolute;
-        top: 12px;
-        left: 12px;
-        z-index: 5;
-        border-radius: ${theme.general.borderRadiusSm};
-        background: ${theme.header.background};
-`
-);
-
-const LogoTextWrapper = styled(Box)(
-  ({ theme }) => `
-        padding-left: ${theme.spacing(1)};
-`
-);
-
-const VersionBadge = styled(Box)(
+const PlusSign = styled(Box)(
   ({ theme }) => `
         background: ${theme.palette.success.main};
         color: ${theme.palette.success.contrastText};
-        padding: ${theme.spacing(0.4, 1)};
+        padding: ${theme.spacing(0, 0.4)};
+        margin-bottom: ${theme.spacing(2)};
         border-radius: ${theme.general.borderRadiusSm};
         text-align: center;
         display: inline-block;
         line-height: 1;
-        font-size: ${theme.typography.pxToRem(11)};
 `
 );
 
 const LogoText = styled(Box)(
   ({ theme }) => `
-        font-size: ${theme.typography.pxToRem(15)};
+        font-size: ${theme.typography.pxToRem(20)};
         font-weight: ${theme.typography.fontWeightBold};
+        padding-right: ${theme.spacing(0.2)};
+        color: ${theme.palette.common.black};
 `
 );
 
@@ -101,18 +56,14 @@ function Logo() {
 
 
   return (
-    <LogoWrapper to="/overview">
-      <LogoSignWrapper>
-        <LogoSign>
-          <LogoSignInner />
-        </LogoSign>
+    <LogoWrapper>
+      <LogoSignWrapper to="/overview">
+        <img src={InnoWingIcon} />
       </LogoSignWrapper>
       <Hidden smDown>
-        <LogoTextWrapper>
-          <Tooltip title="Version 1.1.0" arrow placement="right">
-            <VersionBadge>1.1</VersionBadge>
-          </Tooltip>
-          <LogoText>Tokyo Free White</LogoText>
+        <LogoTextWrapper to="/overview">
+          <LogoText>INNO</LogoText>
+          <PlusSign>+</PlusSign>
         </LogoTextWrapper>
       </Hidden>
     </LogoWrapper>
