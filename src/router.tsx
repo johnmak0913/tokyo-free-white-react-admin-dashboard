@@ -27,6 +27,12 @@ const Messenger = Loader(lazy(() => import('src/content/applications/Messenger')
 const Transactions = Loader(lazy(() => import('src/content/applications/Transactions')));
 const UserProfile = Loader(lazy(() => import('src/content/applications/Users/profile')));
 const UserSettings = Loader(lazy(() => import('src/content/applications/Users/settings')));
+const EquipmentRegistrationOrReservation = Loader(lazy(() => import('src/content/applications/Equipment/RegistrationOrReservation')));
+const EquipmentTraining = Loader(lazy(() => import('src/content/applications/Equipment/Training')));
+const EquipmentSchedule = Loader(lazy(() => import('src/content/applications/Equipment/Schedule')));
+const StaffProfiles = Loader(lazy(() => import('src/content/applications/Staff/Profiles')));
+const StaffConsultation = Loader(lazy(() => import('src/content/applications/Staff/Consultation')));
+const StaffSchedule = Loader(lazy(() => import('src/content/applications/Staff/Schedule')));
 
 // Components
 
@@ -100,6 +106,64 @@ const routes: PartialRouteObject[] = [
         path: '*',
         element: <Status404 />
       },
+    ]
+  },
+  {
+    path: 'equipment',
+    element: (
+      <SidebarLayout />
+    ),
+    children: [
+      {
+        path: '/',
+        element: (
+          <Navigate
+            to="/equipment/registration-or-reservation"
+            replace
+          />
+        )
+      },
+      {
+        path: 'registration-or-reservation',
+        element: <EquipmentRegistrationOrReservation />
+      },
+      {
+        path: 'training',
+        element: <EquipmentTraining />
+      },
+      {
+        path: 'schedule',
+        element: <EquipmentSchedule />
+      }
+    ]
+  },
+  {
+    path: 'staff',
+    element: (
+      <SidebarLayout />
+    ),
+    children: [
+      {
+        path: '/',
+        element: (
+          <Navigate
+            to="/staff/profiles"
+            replace
+          />
+        )
+      },
+      {
+        path: 'profiles',
+        element: <StaffProfiles />
+      },
+      {
+        path: 'consultation',
+        element: <StaffConsultation />
+      },
+      {
+        path: 'schedule',
+        element: <StaffSchedule />
+      }
     ]
   },
   {

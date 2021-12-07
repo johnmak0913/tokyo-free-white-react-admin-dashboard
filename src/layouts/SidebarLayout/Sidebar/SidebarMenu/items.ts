@@ -15,6 +15,11 @@ import RedeemTwoToneIcon from '@mui/icons-material/RedeemTwoTone';
 import SettingsTwoToneIcon from '@mui/icons-material/SettingsTwoTone';
 import TrafficTwoToneIcon from '@mui/icons-material/TrafficTwoTone';
 import VerifiedUserTwoToneIcon from '@mui/icons-material/VerifiedUserTwoTone';
+import HomeTwoToneIcon from '@mui/icons-material/HomeTwoTone';
+import ConstructionTwoToneIcon from '@mui/icons-material/ConstructionTwoTone';
+import AppRegistrationTwoToneIcon from '@mui/icons-material/AppRegistrationTwoTone';
+import EventNoteTwoToneIcon from '@mui/icons-material/EventNoteTwoTone';
+import ContactSupportTwoToneIcon from '@mui/icons-material/ContactSupportTwoTone';
 
 export interface MenuItem {
   link?: string;
@@ -34,10 +39,50 @@ const menuItems: MenuItems[] = [
     heading: '',
     items: [
       {
-        name: 'Overview',
+        name: 'Home',
         link: '/overview',
-        icon: DesignServicesTwoToneIcon
-      }
+        icon: HomeTwoToneIcon
+      },
+    ]
+  },
+  {
+    heading: 'Equipment',
+    items: [
+      {
+        name: 'Registration / Reservation', // or Usage
+        icon: AppRegistrationTwoToneIcon,
+        link: '/equipment/registration-or-reservation'
+      },
+      {
+        name: 'Training',
+        link: '/equipment/training',
+        icon: ConstructionTwoToneIcon
+      },
+      {
+        name: 'Schedule',
+        link: '/equipment/schedule',
+        icon: EventNoteTwoToneIcon
+      },
+    ]
+  },
+  {
+    heading: 'Staff',
+    items: [
+      {
+        name: 'Profiles',
+        link: '/staff/profiles',
+        icon: AccountCircleTwoToneIcon
+      },
+      {
+        name: 'Consultation',
+        icon: ContactSupportTwoToneIcon,
+        link: '/staff/consultation'
+      },
+      {
+        name: 'Schedule',
+        link: '/staff/schedule',
+        icon: EventNoteTwoToneIcon
+      },
     ]
   },
   {

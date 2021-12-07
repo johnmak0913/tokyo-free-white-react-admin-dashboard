@@ -1,7 +1,7 @@
 import { Box, Hidden, Tooltip } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { styled } from '@mui/material/styles';
-import InnoWingIcon from '../../assets/InnoWing-Icon.jpg';
+import InnoWingIcon from 'src/assets/InnoWing-Icon.jpg';
 
 const LogoWrapper = styled(Box)(
   ({ theme }) => `
