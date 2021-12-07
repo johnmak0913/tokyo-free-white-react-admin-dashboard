@@ -59,8 +59,8 @@ const menuItems: MenuItems[] = [
         icon: ConstructionTwoToneIcon
       },
       {
-        name: 'Schedule',
-        link: '/equipment/schedule',
+        name: 'Schedules',
+        link: '/equipment/schedules',
         icon: EventNoteTwoToneIcon
       },
     ]
@@ -79,8 +79,8 @@ const menuItems: MenuItems[] = [
         link: '/staff/consultation'
       },
       {
-        name: 'Schedule',
-        link: '/staff/schedule',
+        name: 'Schedules',
+        link: '/staff/schedules',
         icon: EventNoteTwoToneIcon
       },
     ]

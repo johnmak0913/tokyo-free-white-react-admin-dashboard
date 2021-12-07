@@ -29,10 +29,10 @@ const UserProfile = Loader(lazy(() => import('src/content/applications/Users/pro
 const UserSettings = Loader(lazy(() => import('src/content/applications/Users/settings')));
 const EquipmentRegistrationOrReservation = Loader(lazy(() => import('src/content/applications/Equipment/RegistrationOrReservation')));
 const EquipmentTraining = Loader(lazy(() => import('src/content/applications/Equipment/Training')));
-const EquipmentSchedule = Loader(lazy(() => import('src/content/applications/Equipment/Schedule')));
+const EquipmentSchedules = Loader(lazy(() => import('src/content/applications/Equipment/Schedules')));
 const StaffProfiles = Loader(lazy(() => import('src/content/applications/Staff/Profiles')));
 const StaffConsultation = Loader(lazy(() => import('src/content/applications/Staff/Consultation')));
-const StaffSchedule = Loader(lazy(() => import('src/content/applications/Staff/Schedule')));
+const StaffSchedules = Loader(lazy(() => import('src/content/applications/Staff/Schedules')));
 
 // Components
 
@@ -132,8 +132,8 @@ const routes: PartialRouteObject[] = [
         element: <EquipmentTraining />
       },
       {
-        path: 'schedule',
-        element: <EquipmentSchedule />
+        path: 'schedules',
+        element: <EquipmentSchedules />
       }
     ]
   },
@@ -161,8 +161,8 @@ const routes: PartialRouteObject[] = [
         element: <StaffConsultation />
       },
       {
-        path: 'schedule',
-        element: <StaffSchedule />
+        path: 'schedules',
+        element: <StaffSchedules />
       }
     ]
   },

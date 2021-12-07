@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StaffSchedule = () => {
+const StaffSchedules = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const StaffSchedule = () => {
     )
 }
 
-export default StaffSchedule;
+export default StaffSchedules;
