@@ -20,6 +20,7 @@ import ConstructionTwoToneIcon from '@mui/icons-material/ConstructionTwoTone';
 import AppRegistrationTwoToneIcon from '@mui/icons-material/AppRegistrationTwoTone';
 import EventNoteTwoToneIcon from '@mui/icons-material/EventNoteTwoTone';
 import ContactSupportTwoToneIcon from '@mui/icons-material/ContactSupportTwoTone';
+import EventAvailableTwoToneIcon from '@mui/icons-material/EventAvailableTwoTone';
 
 export interface MenuItem {
   link?: string;
@@ -42,6 +43,11 @@ const menuItems: MenuItems[] = [
         name: 'Home',
         link: '/overview',
         icon: HomeTwoToneIcon
+      },
+      {
+        name: 'My Bookings',
+        link: '/overview',
+        icon: EventAvailableTwoToneIcon
       },
     ]
   },

@@ -2,19 +2,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import PageTitleWrapper from 'src/components/PageTitleWrapper';
 import PageHeader from './PageHeader';
-import { Container, Grid, Card, CardHeader, CardContent, Divider } from '@mui/material';
+import { Container, Grid, Card, CardHeader, CardContent, Divider, InputLabel, MenuItem, FormControl, InputAdornment, Button } from '@mui/material';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
+import Footer from 'src/components/Footer';
 
-import InputLabel from '@mui/material/InputLabel';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import MenuItem from '@mui/material/MenuItem';
-import FormHelperText from '@mui/material/FormHelperText';
-import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import InputAdornment from '@mui/material/InputAdornment';
 import TimePicker from '@mui/lab/TimePicker';
-import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 
 const EquipmentRegistrationOrReservation = () => {
@@ -170,9 +164,6 @@ const EquipmentRegistrationOrReservation = () => {
             <Helmet>
                 <title>Equipment - Reg/Rsrv</title>
             </Helmet>
-            <PageTitleWrapper>
-                <PageHeader />
-            </PageTitleWrapper>
             <Container maxWidth="lg">
                 <Grid
                     container
@@ -180,10 +171,13 @@ const EquipmentRegistrationOrReservation = () => {
                     justifyContent="center"
                     alignItems="stretch"
                     spacing={3}
+                    paddingTop={5}
                 >
                     <Grid item xs={12}>
                         <Card>
-                            <CardHeader title="Input Fields" />
+                            <PageTitleWrapper>
+                                <PageHeader />
+                            </PageTitleWrapper>
                             <Divider />
                             <CardContent>
                                 <Box
@@ -268,6 +262,7 @@ const EquipmentRegistrationOrReservation = () => {
                     </Grid>
                 </Grid>
             </Container>
+            <Footer />
         </>
     )
 }
